@@ -5,7 +5,7 @@ var exec = require('child_process').exec
 var handlerOption = [
   { 
     path: '/hooks/publish_tennetcn', 
-    secret: 'tennetcn.com', 
+    secret: 'yoursecret', 
     shell: 'sh /home/publish/tennetcn/publish.sh' 
   }
 ]
