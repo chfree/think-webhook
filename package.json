@@ -1,0 +1,18 @@
+{
+  "name": "webhook",
+  "version": "1.0.0",
+  "description": "node webhook",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "chfree",
+  "license": "MIT",
+  "dependencies": {
+    "github-webhook-handler": "^1.0.0"
+  }
+}
