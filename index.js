@@ -23,7 +23,8 @@ server.listen(9100, function(){
   var host = server.address().address
   var port = server.address().port
 
-  console.log("应用实例，访问地址为 http://%s:%s", host, port)
+  console.log("application is run at: http://%s:%s", host, port)
+  console.log('date now:%s',new Date())
 })
 
 handler.on('error', function (err) {
@@ -32,7 +33,7 @@ handler.on('error', function (err) {
 
 handler.on('push', function (event) {
   var url = event.url
-  console.log(url, 'url')
+  console.log('req url %s; time: %s', url, new Date())
 
   console.log('Received a push event for %s to %s',
     event.payload.repository.name,
@@ -42,9 +43,13 @@ handler.on('push', function (event) {
   if(currOption.length <= 0){
     console.log('current url is not matchs')
   }else{
-    exec(currOption[0].shell, function(err,stdout,stderr){
+    const shell = currOption[0].shell
+    console.log('exec shell：%s; time [%s]', shell, new Date())
+    exec(shell, function(err,stdout,stderr){
       if(!err) {
         console.log(stdout);
+      }else{
+        console.log('exec shell success; time [%s]', new Date())
       }
     })
   }
