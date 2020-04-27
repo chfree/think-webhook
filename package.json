@@ -1,5 +1,5 @@
 {
-  "name": "webhook",
+  "name": "think-webhook",
   "version": "1.0.0",
   "description": "node webhook",
   "main": "index.js",
